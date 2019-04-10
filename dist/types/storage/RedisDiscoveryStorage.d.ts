@@ -1,11 +1,11 @@
 import * as Redis from 'redis';
 import { BaseDiscoveryStorage } from "./BaseDiscoveryStorage";
-export interface RedisDiscoveryStorage extends Redis.ClientOpts {
+export interface RedisDiscoveryStorageOptions extends Redis.ClientOpts {
 }
 export declare class RedisDiscoveryStorage implements BaseDiscoveryStorage {
-    options: RedisDiscoveryStorage;
+    options: RedisDiscoveryStorageOptions;
     protected client: Redis.RedisClient;
-    constructor(options: RedisDiscoveryStorage);
+    constructor(options: RedisDiscoveryStorageOptions);
     setItem(key: string, value: string): Promise<void>;
     getItem(key: string): Promise<string>;
     removeItem(key: string): Promise<void>;

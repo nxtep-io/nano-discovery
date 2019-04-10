@@ -1,22 +1,22 @@
-nano-errors
-===========
+nano-discovery
+==============
 
-A minimalistic error and logging framework for a enhanced exception handling experience in TS / JS environments.
+A minimalistic Service Discovery framework for handling up and down microsservice events in a decentralized architecture.
 
 
 ## Getting started
 
 ```bash
 # Add to your dependencies using yarn
-yarn add "nxtep-io/nano-errors";
+yarn add "nxtep-io/nano-discovery";
 
 # Or, using NPM
-npm install "github:nxtep-io/nano-errors";
+npm install "github:nxtep-io/nano-discovery";
 ```
 
 ## API Docs
 
-Check the published Github Page at https://nxtep-io.github.io/nano-errors/
+Check the published Github Page at https://nxtep-io.github.io/nano-discovery/
 
 ## License
 

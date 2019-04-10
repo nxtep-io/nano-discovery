@@ -27,6 +27,7 @@ export declare class DiscoveryService<Type> extends Service {
     once(type: Type, listener: DiscoveryListener): Promise<boolean>;
     up(type: Type): Promise<void>;
     down(type: Type): Promise<void>;
+    clear(): Promise<void>;
     protected notifyListeners(type: Type, status: DiscoveryStatus): Promise<void>;
     onMount(server: any): Promise<void>;
     onInit(server: any): Promise<void>;
