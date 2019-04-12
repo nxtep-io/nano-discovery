@@ -2,70 +2,60 @@ import { DiscoveryService, DiscoveryStatus } from "../lib";
 
 describe("lib.discovery.DiscoveryService", async () => {
   it("should instantiate a DiscoveryService properly", async () => {
-    const discovery = new DiscoveryService<string>({ name: 'TestDiscoveryService' });
-    await expect(discovery.getStatus('unknown')).resolves.toEqual(DiscoveryStatus.UNAVAILABLE);
+    const discovery = new DiscoveryService({ name: 'TestDiscoveryService' });
+    await expect(discovery.status('unknown')).resolves.toEqual(DiscoveryStatus.UNKNOWN);
   });
 
   it("should handle a simple up down routine properly", async () => {
-    const discovery = new DiscoveryService<string>({ name: 'TestDiscoveryService' });
+    const discovery = new DiscoveryService({ name: 'TestDiscoveryService' });
     const TestKey = 'test';
 
-    await expect(discovery.getStatus(TestKey)).resolves.toEqual(DiscoveryStatus.UNAVAILABLE);
+    await expect(discovery.status(TestKey)).resolves.toEqual(DiscoveryStatus.UNKNOWN);
 
     await discovery.up('ENSURE_CLEAR');
     await discovery.up(TestKey);
-    await expect(discovery.getStatus(TestKey)).resolves.toEqual(DiscoveryStatus.AVAILABLE);
+    await expect(discovery.status(TestKey)).resolves.toEqual(DiscoveryStatus.UP);
 
     await discovery.down(TestKey);
-    await expect(discovery.getStatus(TestKey)).resolves.toEqual(DiscoveryStatus.UNAVAILABLE);
+    await expect(discovery.status(TestKey)).resolves.toEqual(DiscoveryStatus.DOWN);
 
     await discovery.clear();
-    await expect(discovery.getStatus('ENSURE_CLEAR')).resolves.toEqual(DiscoveryStatus.UNAVAILABLE);
+    await expect(discovery.status('ENSURE_CLEAR')).resolves.toEqual(DiscoveryStatus.UNKNOWN);
   });
 
-  it("should handle a ready service once listener properly", async () => {
-    const discovery = new DiscoveryService<string>({ name: 'TestDiscoveryService' });
+  it("should handle a ready service once listener properly", async (done) => {
+    let counter = 0;
+    const TestKey = 'test';
+    const discovery = new DiscoveryService({ name: 'TestDiscoveryService' });
+
+    await discovery.subscribe(TestKey, {
+      update: async (key, status) => {
+        counter += 1;
+        expect(key).toBe(TestKey);
+        expect(status).toBe(DiscoveryStatus.UP);
+        done();
+      }
+    });
+
+    await discovery.up(TestKey);
+    expect(counter).toBe(1);
+  });
+
+  it("should handle a ready service on listener properly even with exceptions", async () => {
+    const discovery = new DiscoveryService({ name: 'TestDiscoveryService' });
     const TestKey = 'test';
     await discovery.up(TestKey);
 
     let counter = 0;
-    const result = await discovery.once(TestKey, async (key, status) => {
-      counter += 1;
-      await expect(status).toBe(DiscoveryStatus.AVAILABLE);
+
+    await discovery.subscribe(TestKey, {
+      update: async (key, status) => {
+        counter += 1;
+        expect(key).toBe(TestKey);
+        expect(status).toBe(DiscoveryStatus.UP);
+        throw new Error('This should be ignored and logged as a warn');
+      }
     });
-
-    expect(result).toBe(true);
-    expect(counter).toBe(1);
-  });
-
-  it("should handle a ready service once listener properly even with exceptions", async () => {
-    const discovery = new DiscoveryService<string>({ name: 'TestDiscoveryService' });
-    const TestKey = 'test';
-    await discovery.up(TestKey);
-
-    let counter = 0;
-    const result = await discovery.once(TestKey, async (key, status) => {
-      counter += 1;
-      throw new Error('This should be ignored and logged as a warn');
-    });
-
-    expect(result).toBe(true);
-    expect(counter).toBe(1);
-  });
-
-  it("should handle an unready service once listener properly", async () => {
-    const discovery = new DiscoveryService<string>({ name: 'TestDiscoveryService' });
-    const TestKey = 'test';
-    await discovery.down(TestKey);
-
-    let counter = 0;
-    const result = await discovery.once(TestKey, async (key, status) => {
-      counter += 1;
-      await expect(status).toBe(DiscoveryStatus.AVAILABLE);
-    });
-
-    expect(result).toBe(false);
-    expect(counter).toBe(0);
 
     await discovery.up(TestKey);
     expect(counter).toBe(1);
@@ -77,14 +67,15 @@ describe("lib.discovery.DiscoveryService", async () => {
     });
 
     it('should throw without proper initialization', async () => {
-      expect(() => DiscoveryService.getInstance<string>()).toThrow(/Discovery service is invalid/ig);
+      expect(() => DiscoveryService.getInstance()).toThrow(/Discovery service is invalid/ig);
     })
 
     it('should initialize the singleton instance properly', async () => {
-      DiscoveryService.initialize<string>({ name: 'TestDiscoveryService' });
-      const instance = DiscoveryService.getInstance<string>();
-      await expect(instance.getStatus('unknown')).resolves
-        .toEqual(DiscoveryStatus.UNAVAILABLE);
+      DiscoveryService.initialize({ name: 'TestDiscoveryService' });
+      const instance = DiscoveryService.getInstance();
+      await expect(instance.status('unknown'))
+        .resolves
+        .toEqual(DiscoveryStatus.UNKNOWN);
     })
   })
 });

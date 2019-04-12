@@ -1,6 +1,6 @@
 import * as Redis from 'redis';
 import { promisify } from 'util';
-import { BaseDiscoveryStorage } from "./BaseDiscoveryStorage";
+import { BaseDiscoveryStorage } from './BaseDiscoveryStorage';
 
 export interface RedisDiscoveryStorageOptions extends Redis.ClientOpts {
 
@@ -12,6 +12,13 @@ export class RedisDiscoveryStorage implements BaseDiscoveryStorage {
 
   constructor(public options: RedisDiscoveryStorageOptions) {
     this.client = Redis.createClient(this.options);
+  }
+
+  public async connect(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      this.client.on('error', reject);
+      this.client.on('ready', resolve);
+    })
   }
 
   public async setItem(key: string, value: string): Promise<void> {

@@ -3,6 +3,9 @@ import { BaseDiscoveryStorage } from "./BaseDiscoveryStorage";
 export class MemoryDiscoveryService implements BaseDiscoveryStorage {
   protected data = {};
 
+  public async connect(): Promise<void> {
+  }
+
   public async setItem(key: string, value: string): Promise<void> {
     this.data[key] = value;
   }
