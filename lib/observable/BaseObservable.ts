@@ -26,6 +26,8 @@ export abstract class BaseObservable {
 
   public abstract async connect(): Promise<void>;
 
+  public abstract async disconnect(): Promise<void>;
+
   /**
    * Subscribe for updates.
    *

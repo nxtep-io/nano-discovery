@@ -19,5 +19,5 @@ discovery.onInit(null).then(async () => {
   await discovery.up('sample');
   discovery.logger.info('Successfully published into discovery service', { sample: 'up' });
   await discovery.onUnmount(null);
-  process.exit(1);
+  process.exit(0);
 })

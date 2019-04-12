@@ -5,17 +5,21 @@ const { createClient } = require('redis-mock');
 module.exports = {
   createClient: (...args) => {
     let client = createClient(...args);
-    const listeners = {};
+    let listeners = [];
 
-    client.publish = async (channel, name, data) => {
-      listeners[name] = listeners[name] || [];
-      listeners[name].map(listener => listener(name, data));
-      listeners[name] = [];
+    client.publish = async (name, data) => {
+      listeners = listeners || [];
+      listeners.map(listener => listener(name, data));
+      listeners = [];
     };
 
     client.on = (name, listener) => {
-      listeners[name] = listeners[name] || [];
-      listeners[name].push(listener);
+      if (['connected', 'ready', 'subscribe'].indexOf(name) >= 0) {
+        listener(name);
+      } else {
+        listeners = listeners || [];
+        listeners.push(listener);
+      }
     }
 
     client.subscribe = sinon.fake();

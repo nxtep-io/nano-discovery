@@ -25,6 +25,9 @@ export class MemoryObservable extends BaseObservable {
   public async connect(): Promise<void> {
   }
 
+  public async disconnect(): Promise<void> {
+  }
+
   /**
    * Subscribe for updates.
    *

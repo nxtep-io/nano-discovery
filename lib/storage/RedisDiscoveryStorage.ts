@@ -16,12 +16,20 @@ export class RedisDiscoveryStorage implements BaseDiscoveryStorage {
   }
 
   public async connect(): Promise<void> {
-    // if (!this.client.connected) {
-    //   return new Promise((resolve, reject) => {
-    //     this.client.on('error', reject);
-    //     this.client.on('connect', resolve);
-    //   })
-    // }
+    if (!this.client.connected) {
+      return new Promise((resolve, reject) => {
+        this.client.on('error', reject);
+        this.client.on('ready', resolve);
+      })
+    }
+  }
+
+  public async disconnect(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      this.client.on('error', reject);
+      this.client.quit(() => resolve());
+      this.client.quit();
+    })
   }
 
   public async setItem(key: string, value: string): Promise<void> {

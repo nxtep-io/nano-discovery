@@ -62,13 +62,16 @@ export class DiscoveryService extends Service {
   public async onMount(server) { }
 
   public async onInit(server) { 
-    // await this.storage.connect();
-    // await this.observable.connect();
+    await this.storage.connect();
+    await this.observable.connect();
   }
 
   public async onReady(server) { }
 
-  public async onUnmount(server) { }
+  public async onUnmount(server) { 
+    await this.observable.disconnect();
+    await this.storage.disconnect();
+  }
 
   public async clear(): Promise<void> {
     // TODO: Notify clear for the subscribers

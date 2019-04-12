@@ -12,6 +12,8 @@ describe("lib.discovery.Redis", async () => {
         clientOpts: {},
       }),
     });
+
+    await discovery.onInit(null);
   })
 
   afterEach(async () => {
@@ -29,6 +31,7 @@ describe("lib.discovery.Redis", async () => {
 
     await discovery.subscribe(TestKey, {
       update: async (key, status) => {
+        console.log('REDIS!');
         counter += 1;
         expect(key).toBe(TestKey);
         expect(status).toBe(DiscoveryStatus.UP);
