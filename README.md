@@ -80,16 +80,11 @@ import { DiscoveryService, DiscoveryStatus } from "../lib";
 // For a decentralized approach check the Redis samples
 const discovery = new DiscoveryService({ name: 'TestDiscoveryService' });
 
-// This is not needed if registered in the Main Server of the framework
-await discovery.onInit(null).then(async () => {
-
-  await discovery.subscribe('sample', {
-    update: async (type: string, status: DiscoveryStatus) => {
-      discovery.logger.debug(`Got new discovery message from "${type}"`, { type, status });
-    }
-  });
-
-  discovery.logger.info(`Subscriber listening for "sample" discovery events`);
+// Subscribe to "sample" service updates
+await discovery.subscribe('sample', {
+  update: async (type: string, status: DiscoveryStatus) => {
+    discovery.logger.debug(`Got new discovery message from "${type}"`, { type, status });
+  }
 });
 
 // Somewhere in the code, you can update a service status

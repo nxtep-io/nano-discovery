@@ -7,6 +7,7 @@ import { DiscoveryService, DiscoveryStatus } from "../lib";
 // For a decentralized approach check the Redis samples
 const discovery = new DiscoveryService({ name: 'TestDiscoveryService' });
 
+// This is not needed if registered in the Main Server of the framework
 discovery.onInit(null).then(async () => {
 
   await discovery.subscribe('sample', {

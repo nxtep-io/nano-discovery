@@ -123,20 +123,17 @@ npm install <span class="hljs-string">"github:nxtep-io/nano-discovery"</span>;</
 <span class="hljs-comment">// For a decentralized approach check the Redis samples</span>
 <span class="hljs-keyword">const</span> discovery = <span class="hljs-keyword">new</span> DiscoveryService({ name: <span class="hljs-string">'TestDiscoveryService'</span> });
 
-<span class="hljs-comment">// This is not needed if registered in the Main Server of the framework</span>
-<span class="hljs-keyword">await</span> discovery.onInit(<span class="hljs-literal">null</span>).then(<span class="hljs-keyword">async</span> () =&gt; {
-
-  <span class="hljs-keyword">await</span> discovery.subscribe(<span class="hljs-string">'sample'</span>, {
-    update: <span class="hljs-keyword">async</span> (<span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>, status: DiscoveryStatus) =&gt; {
-      discovery.logger.debug(<span class="hljs-string">`Got new discovery message from "<span class="hljs-subst">${type}</span>"`</span>, { <span class="hljs-keyword">type</span>, status });
-    }
-  });
-
-  discovery.logger.info(<span class="hljs-string">`Subscriber listening for "sample" discovery events`</span>);
+<span class="hljs-comment">// Subscribe to "sample" service updates</span>
+<span class="hljs-keyword">await</span> discovery.subscribe(<span class="hljs-string">'sample'</span>, {
+  update: <span class="hljs-keyword">async</span> (<span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>, status: DiscoveryStatus) =&gt; {
+    discovery.logger.debug(<span class="hljs-string">`Got new discovery message from "<span class="hljs-subst">${type}</span>"`</span>, { <span class="hljs-keyword">type</span>, status });
+  }
 });
 
 <span class="hljs-comment">// Somewhere in the code, you can update a service status</span>
 <span class="hljs-keyword">await</span> discovery.up(<span class="hljs-string">'sample'</span>);</code></pre>
+				<h2 id="examples">Examples</h2>
+				<p>Check the example code folder in the repository under <a href="https://github.com/nxtep-io/nano-discovery/tree/master/examples">./examples</a></p>
 				<h2 id="api-docs">API Docs</h2>
 				<p>Check the published Github Page at <a href="https://nxtep-io.github.io/nano-discovery/">https://nxtep-io.github.io/nano-discovery/</a></p>
 				<h2 id="license">License</h2>
