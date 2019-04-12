@@ -11,13 +11,13 @@ export class RedisDiscoveryStorage implements BaseDiscoveryStorage {
   name = 'redis';
   protected client: Redis.RedisClient;
 
-  constructor(public options: RedisDiscoveryStorageOptions) {
+  constructor(public options: RedisDiscoveryStorageOptions = {}) {
     this.client = Redis.createClient(this.options);
   }
 
   public async connect(): Promise<void> {
     if (!this.client.connected) {
-      return new Promise((resolve, reject) => {
+      return new Promise<void>((resolve, reject) => {
         this.client.on('error', reject);
         this.client.on('ready', resolve);
       })
@@ -25,7 +25,7 @@ export class RedisDiscoveryStorage implements BaseDiscoveryStorage {
   }
 
   public async disconnect(): Promise<void> {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       this.client.on('error', reject);
       this.client.quit(() => resolve());
       this.client.quit();

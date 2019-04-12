@@ -3,22 +3,21 @@ import { promisify } from 'util';
 import { BaseObservable, BaseObservableOptions, Observer } from "./BaseObservable";
 
 export interface RedisObservableOptions extends BaseObservableOptions {
-  channel: string;
-  clientOpts: Redis.ClientOpts;
+  clientOpts?: Redis.ClientOpts;
 }
 
 export class RedisObservable extends BaseObservable {
   name = 'redis';
   protected client: Redis.RedisClient;
 
-  constructor(public options: RedisObservableOptions) {
+  constructor(public options: RedisObservableOptions = {}) {
     super(options);
     this.client = Redis.createClient(this.options.clientOpts);
   }
 
   public async connect(): Promise<void> {
     if (!this.client.connected) {
-      return new Promise((resolve, reject) => {
+      return new Promise<void>((resolve, reject) => {
         this.client.on('error', reject);
         this.client.on('ready', resolve);
       })
@@ -26,7 +25,7 @@ export class RedisObservable extends BaseObservable {
   }
 
   public async disconnect(): Promise<void> {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       this.client.on('error', reject);
       this.client.quit(() => resolve());
       this.client.quit();
@@ -36,8 +35,12 @@ export class RedisObservable extends BaseObservable {
   // Reference: https://redis.io/commands/subscribe
   public async subscribe(eventName: string, listener: Observer): Promise<void> {
     this.client.subscribe(eventName);
-    this.client.on('message', (...args) => listener.update(...args));
-    return new Promise(resolve => this.client.on('subscribe', resolve));
+    this.client.on('message', (channel, message) => {
+      if (channel === eventName) {
+        listener.update(channel, message)
+      }
+    });
+    return new Promise<void>(resolve => this.client.on('subscribe', resolve));
   }
 
   // Reference: https://redis.io/commands/unsubscribe

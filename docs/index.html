@@ -72,6 +72,71 @@ yarn add <span class="hljs-string">"nxtep-io/nano-discovery"</span>;
 
 <span class="hljs-comment"># Or, using NPM</span>
 npm install <span class="hljs-string">"github:nxtep-io/nano-discovery"</span>;</code></pre>
+				<br />
+				<p><strong>Redis</strong></p>
+				<p>For production environment, we strongly recommend using Redis. This will be robust and will provide
+				a distributed way to deal with the service discovery.</p>
+				<p>The subscribe would look something like this:</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { DiscoveryService, DiscoveryStatus, RedisDiscoveryStorage, RedisObservable } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../lib"</span>;
+
+<span class="hljs-keyword">const</span> clientOpts = {
+  host: <span class="hljs-string">'localhost'</span>,
+  port: <span class="hljs-number">6379</span>
+}
+
+<span class="hljs-keyword">const</span> discovery = <span class="hljs-keyword">new</span> DiscoveryService({  
+  name: <span class="hljs-string">'TestDiscoveryService'</span>,
+  storage: <span class="hljs-keyword">new</span> RedisDiscoveryStorage(clientOpts),
+  observable: <span class="hljs-keyword">new</span> RedisObservable({ clientOpts }),
+});
+
+<span class="hljs-keyword">await</span> discovery.subscribe(<span class="hljs-string">'sample'</span>, {
+  <span class="hljs-keyword">async</span> update(<span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>, status: DiscoveryStatus) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Got new discovery message from "<span class="hljs-subst">${type}</span>"`</span>, { <span class="hljs-keyword">type</span>, status });
+  }
+});</code></pre>
+				<p>The publisher would look something like this:</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { DiscoveryService, RedisDiscoveryStorage, RedisObservable } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../lib"</span>;
+
+<span class="hljs-keyword">const</span> clientOpts = {
+  host: <span class="hljs-string">'localhost'</span>,
+  port: <span class="hljs-number">6379</span>
+}
+
+<span class="hljs-keyword">const</span> discovery = <span class="hljs-keyword">new</span> DiscoveryService({
+  name: <span class="hljs-string">'TestDiscoveryService'</span>,
+  storage: <span class="hljs-keyword">new</span> RedisDiscoveryStorage(clientOpts),
+  observable: <span class="hljs-keyword">new</span> RedisObservable({ clientOpts }),
+});
+
+<span class="hljs-comment">// Update a service named "sample" as "up"</span>
+<span class="hljs-keyword">await</span> discovery.up(<span class="hljs-string">'sample'</span>);</code></pre>
+				<p><strong>Memory</strong></p>
+				<p>To start fast, you can use the debug version with a Memory storage. This is meant for development
+				purposes only and won&#39;t work well under production loads.</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { DiscoveryService, DiscoveryStatus } <span class="hljs-keyword">from</span> <span class="hljs-string">"../lib"</span>;
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// NOTICE: Memory providers are for debug only</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// This won't work in different process or instances</span>
+<span class="hljs-comment">// For a decentralized approach check the Redis samples</span>
+<span class="hljs-keyword">const</span> discovery = <span class="hljs-keyword">new</span> DiscoveryService({ name: <span class="hljs-string">'TestDiscoveryService'</span> });
+
+<span class="hljs-comment">// This is not needed if registered in the Main Server of the framework</span>
+<span class="hljs-keyword">await</span> discovery.onInit(<span class="hljs-literal">null</span>).then(<span class="hljs-keyword">async</span> () =&gt; {
+
+  <span class="hljs-keyword">await</span> discovery.subscribe(<span class="hljs-string">'sample'</span>, {
+    update: <span class="hljs-keyword">async</span> (<span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>, status: DiscoveryStatus) =&gt; {
+      discovery.logger.debug(<span class="hljs-string">`Got new discovery message from "<span class="hljs-subst">${type}</span>"`</span>, { <span class="hljs-keyword">type</span>, status });
+    }
+  });
+
+  discovery.logger.info(<span class="hljs-string">`Subscriber listening for "sample" discovery events`</span>);
+});
+
+<span class="hljs-comment">// Somewhere in the code, you can update a service status</span>
+<span class="hljs-keyword">await</span> discovery.up(<span class="hljs-string">'sample'</span>);</code></pre>
 				<h2 id="api-docs">API Docs</h2>
 				<p>Check the published Github Page at <a href="https://nxtep-io.github.io/nano-discovery/">https://nxtep-io.github.io/nano-discovery/</a></p>
 				<h2 id="license">License</h2>
@@ -91,17 +156,29 @@ npm install <span class="hljs-string">"github:nxtep-io/nano-discovery"</span>;</
 					<li class=" tsd-kind-enum tsd-is-external">
 						<a href="enums/discoverystatus.html" class="tsd-kind-icon">Discovery<wbr>Status</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/baseobservable.html" class="tsd-kind-icon">Base<wbr>Observable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/discoveryservice.html" class="tsd-kind-icon">Discovery<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/memorydiscoveryservice.html" class="tsd-kind-icon">Memory<wbr>Discovery<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/memoryobservable.html" class="tsd-kind-icon">Memory<wbr>Observable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/redisdiscoverystorage.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/redisobservable.html" class="tsd-kind-icon">Redis<wbr>Observable</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/basediscoverystorage.html" class="tsd-kind-icon">Base<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/baseobservableoptions.html" class="tsd-kind-icon">Base<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/discoverylistenersmap.html" class="tsd-kind-icon">Discovery<wbr>Listeners<wbr>Map</a>
@@ -109,11 +186,20 @@ npm install <span class="hljs-string">"github:nxtep-io/nano-discovery"</span>;</
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/discoverymodulesmap.html" class="tsd-kind-icon">Discovery<wbr>Modules<wbr>Map</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/discoveryserviceoptions.html" class="tsd-kind-icon">Discovery<wbr>Service<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/memoryobservableoptions.html" class="tsd-kind-icon">Memory<wbr>Observable<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/observer.html" class="tsd-kind-icon">Observer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/redisdiscoverystorageoptions.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/redisobservableoptions.html" class="tsd-kind-icon">Redis<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
 						<a href="globals.html#discoverylistener" class="tsd-kind-icon">Discovery<wbr>Listener</a>

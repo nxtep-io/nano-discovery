@@ -76,19 +76,26 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-has-type-parameter tsd-is-external"><a href="classes/discoveryservice.html" class="tsd-kind-icon">Discovery<wbr>Service</a></li>
+								<li class="tsd-kind-class tsd-is-external"><a href="classes/baseobservable.html" class="tsd-kind-icon">Base<wbr>Observable</a></li>
+								<li class="tsd-kind-class tsd-is-external"><a href="classes/discoveryservice.html" class="tsd-kind-icon">Discovery<wbr>Service</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/memorydiscoveryservice.html" class="tsd-kind-icon">Memory<wbr>Discovery<wbr>Service</a></li>
+								<li class="tsd-kind-class tsd-is-external"><a href="classes/memoryobservable.html" class="tsd-kind-icon">Memory<wbr>Observable</a></li>
 								<li class="tsd-kind-class tsd-is-external"><a href="classes/redisdiscoverystorage.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage</a></li>
+								<li class="tsd-kind-class tsd-is-external"><a href="classes/redisobservable.html" class="tsd-kind-icon">Redis<wbr>Observable</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/basediscoverystorage.html" class="tsd-kind-icon">Base<wbr>Discovery<wbr>Storage</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/baseobservableoptions.html" class="tsd-kind-icon">Base<wbr>Observable<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/discoverylistenersmap.html" class="tsd-kind-icon">Discovery<wbr>Listeners<wbr>Map</a></li>
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/discoverymodulesmap.html" class="tsd-kind-icon">Discovery<wbr>Modules<wbr>Map</a></li>
-								<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/discoveryserviceoptions.html" class="tsd-kind-icon">Discovery<wbr>Service<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/discoveryserviceoptions.html" class="tsd-kind-icon">Discovery<wbr>Service<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/memoryobservableoptions.html" class="tsd-kind-icon">Memory<wbr>Observable<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/observer.html" class="tsd-kind-icon">Observer</a></li>
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/redisdiscoverystorageoptions.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/redisobservableoptions.html" class="tsd-kind-icon">Redis<wbr>Observable<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
@@ -108,28 +115,22 @@
 					<div class="tsd-signature tsd-kind-icon">Discovery<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in DiscoveryService.ts:10</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L12">DiscoveryService.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">&lt;Type&gt;<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span>, status<span class="tsd-signature-symbol">: </span><a href="enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, status<span class="tsd-signature-symbol">: </span><a href="enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
-										<h4 class="tsd-type-parameters-title">Type parameters</h4>
-										<ul class="tsd-type-parameters">
-											<li>
-												<h4>Type</h4>
-											</li>
-										</ul>
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>type: <span class="tsd-signature-type">Type</span></h5>
+												<h5>type: <span class="tsd-signature-type">string</span></h5>
 											</li>
 											<li>
 												<h5>status: <a href="enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a></h5>
@@ -157,17 +158,29 @@
 					<li class=" tsd-kind-enum tsd-is-external">
 						<a href="enums/discoverystatus.html" class="tsd-kind-icon">Discovery<wbr>Status</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/baseobservable.html" class="tsd-kind-icon">Base<wbr>Observable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/discoveryservice.html" class="tsd-kind-icon">Discovery<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/memorydiscoveryservice.html" class="tsd-kind-icon">Memory<wbr>Discovery<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/memoryobservable.html" class="tsd-kind-icon">Memory<wbr>Observable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="classes/redisdiscoverystorage.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/redisobservable.html" class="tsd-kind-icon">Redis<wbr>Observable</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/basediscoverystorage.html" class="tsd-kind-icon">Base<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/baseobservableoptions.html" class="tsd-kind-icon">Base<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/discoverylistenersmap.html" class="tsd-kind-icon">Discovery<wbr>Listeners<wbr>Map</a>
@@ -175,11 +188,20 @@
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/discoverymodulesmap.html" class="tsd-kind-icon">Discovery<wbr>Modules<wbr>Map</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/discoveryserviceoptions.html" class="tsd-kind-icon">Discovery<wbr>Service<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/memoryobservableoptions.html" class="tsd-kind-icon">Memory<wbr>Observable<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/observer.html" class="tsd-kind-icon">Observer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/redisdiscoverystorageoptions.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/redisobservableoptions.html" class="tsd-kind-icon">Redis<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
 						<a href="globals.html#discoverylistener" class="tsd-kind-icon">Discovery<wbr>Listener</a>

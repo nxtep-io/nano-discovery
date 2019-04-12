@@ -7,7 +7,6 @@ const discovery = new DiscoveryService({
     port: 6379,
   }),
   observable: new RedisObservable({
-    channel: 'sample',
     clientOpts: {
       host: 'localhost',
       port: 6379,

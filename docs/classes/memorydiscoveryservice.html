@@ -84,16 +84,19 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-private-protected tsd-is-external">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="memorydiscoveryservice.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="memorydiscoveryservice.html#name" class="tsd-kind-icon">name</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="memorydiscoveryservice.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="memorydiscoveryservice.html#connect" class="tsd-kind-icon">connect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="memorydiscoveryservice.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="memorydiscoveryservice.html#getitem" class="tsd-kind-icon">get<wbr>Item</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="memorydiscoveryservice.html#removeitem" class="tsd-kind-icon">remove<wbr>Item</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="memorydiscoveryservice.html#setitem" class="tsd-kind-icon">set<wbr>Item</a></li>
@@ -102,7 +105,7 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected tsd-is-external">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
 					<a name="data" class="tsd-anchor"></a>
@@ -110,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in storage/MemoryDiscoveryStorage.ts:4</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L5">storage/MemoryDiscoveryStorage.ts:5</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -118,6 +121,17 @@
 						<ul class="tsd-parameters">
 						</ul>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;memory&quot;</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/basediscoverystorage.html">BaseDiscoveryStorage</a>.<a href="../interfaces/basediscoverystorage.html#name">name</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L4">storage/MemoryDiscoveryStorage.ts:4</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
@@ -132,7 +146,41 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in storage/MemoryDiscoveryStorage.ts:18</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L25">storage/MemoryDiscoveryStorage.ts:25</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="connect" class="tsd-anchor"></a>
+					<h3>connect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L7">storage/MemoryDiscoveryStorage.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="disconnect" class="tsd-anchor"></a>
+					<h3>disconnect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">disconnect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L10">storage/MemoryDiscoveryStorage.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -149,7 +197,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in storage/MemoryDiscoveryStorage.ts:10</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L17">storage/MemoryDiscoveryStorage.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -172,7 +220,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in storage/MemoryDiscoveryStorage.ts:14</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L21">storage/MemoryDiscoveryStorage.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -195,7 +243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in storage/MemoryDiscoveryStorage.ts:6</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/MemoryDiscoveryStorage.ts#L13">storage/MemoryDiscoveryStorage.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -226,7 +274,10 @@
 					<li class=" tsd-kind-enum tsd-is-external">
 						<a href="../enums/discoverystatus.html" class="tsd-kind-icon">Discovery<wbr>Status</a>
 					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="baseobservable.html" class="tsd-kind-icon">Base<wbr>Observable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="discoveryservice.html" class="tsd-kind-icon">Discovery<wbr>Service</a>
 					</li>
 				</ul>
@@ -237,8 +288,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
 								<a href="memorydiscoveryservice.html#data" class="tsd-kind-icon">data</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="memorydiscoveryservice.html#name" class="tsd-kind-icon">name</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="memorydiscoveryservice.html#clear" class="tsd-kind-icon">clear</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="memorydiscoveryservice.html#connect" class="tsd-kind-icon">connect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="memorydiscoveryservice.html#disconnect" class="tsd-kind-icon">disconnect</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="memorydiscoveryservice.html#getitem" class="tsd-kind-icon">get<wbr>Item</a>
@@ -254,10 +314,19 @@
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-is-external">
+						<a href="memoryobservable.html" class="tsd-kind-icon">Memory<wbr>Observable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="redisdiscoverystorage.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="redisobservable.html" class="tsd-kind-icon">Redis<wbr>Observable</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/basediscoverystorage.html" class="tsd-kind-icon">Base<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/baseobservableoptions.html" class="tsd-kind-icon">Base<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/discoverylistenersmap.html" class="tsd-kind-icon">Discovery<wbr>Listeners<wbr>Map</a>
@@ -265,11 +334,20 @@
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/discoverymodulesmap.html" class="tsd-kind-icon">Discovery<wbr>Modules<wbr>Map</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/discoveryserviceoptions.html" class="tsd-kind-icon">Discovery<wbr>Service<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/memoryobservableoptions.html" class="tsd-kind-icon">Memory<wbr>Observable<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/observer.html" class="tsd-kind-icon">Observer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/redisdiscoverystorageoptions.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/redisobservableoptions.html" class="tsd-kind-icon">Redis<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
 						<a href="../globals.html#discoverylistener" class="tsd-kind-icon">Discovery<wbr>Listener</a>

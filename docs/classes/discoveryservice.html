@@ -59,21 +59,13 @@
 					<a href="discoveryservice.html">DiscoveryService</a>
 				</li>
 			</ul>
-			<h1>Class DiscoveryService&lt;Type&gt;</h1>
+			<h1>Class DiscoveryService</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>Type</h4>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -108,6 +100,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#listeners" class="tsd-kind-icon">listeners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="discoveryservice.html#logger" class="tsd-kind-icon">logger</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#observable" class="tsd-kind-icon">observable</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-external"><a href="discoveryservice.html#options" class="tsd-kind-icon">options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#storage" class="tsd-kind-icon">storage</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="discoveryservice.html#type" class="tsd-kind-icon">type</a></li>
@@ -120,16 +113,16 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#clear" class="tsd-kind-icon">clear</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="discoveryservice.html#describe" class="tsd-kind-icon">describe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#down" class="tsd-kind-icon">down</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#getstatus" class="tsd-kind-icon">get<wbr>Status</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="discoveryservice.html#notifylisteners" class="tsd-kind-icon">notify<wbr>Listeners</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external"><a href="discoveryservice.html#oninit" class="tsd-kind-icon">on<wbr>Init</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external"><a href="discoveryservice.html#onmount" class="tsd-kind-icon">on<wbr>Mount</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external"><a href="discoveryservice.html#onready" class="tsd-kind-icon">on<wbr>Ready</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external"><a href="discoveryservice.html#onunmount" class="tsd-kind-icon">on<wbr>Unmount</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#once" class="tsd-kind-icon">once</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#status" class="tsd-kind-icon">status</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discoveryservice.html#up" class="tsd-kind-icon">up</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external"><a href="discoveryservice.html#getinstance" class="tsd-kind-icon">get<wbr>Instance</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external"><a href="discoveryservice.html#initialize" class="tsd-kind-icon">initialize</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="discoveryservice.html#getinstance" class="tsd-kind-icon">get<wbr>Instance</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="discoveryservice.html#initialize" class="tsd-kind-icon">initialize</a></li>
 							</ul>
 						</section>
 					</div>
@@ -141,20 +134,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Discovery<wbr>Service<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Discovery<wbr>Service<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Service.__constructor</p>
 								<ul>
-									<li>Defined in DiscoveryService.ts:29</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L33">DiscoveryService.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>options: <a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></h4>
@@ -170,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">listeners<span class="tsd-signature-symbol">:</span> <a href="../interfaces/discoverylistenersmap.html" class="tsd-signature-type">DiscoveryListenersMap</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in DiscoveryService.ts:26</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L29">DiscoveryService.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -185,14 +178,24 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="observable" class="tsd-anchor"></a>
+					<h3>observable</h3>
+					<div class="tsd-signature tsd-kind-icon">observable<span class="tsd-signature-symbol">:</span> <a href="baseobservable.html" class="tsd-signature-type">BaseObservable</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L32">DiscoveryService.ts:32</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
 					<a name="options" class="tsd-anchor"></a>
 					<h3>options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a></div>
 					<aside class="tsd-sources">
 						<p>Overrides Service.options</p>
 						<ul>
-							<li>Defined in DiscoveryService.ts:27</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L30">DiscoveryService.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -202,7 +205,7 @@
 					<div class="tsd-signature tsd-kind-icon">storage<span class="tsd-signature-symbol">:</span> <a href="../interfaces/basediscoverystorage.html" class="tsd-signature-type">BaseDiscoveryStorage</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in DiscoveryService.ts:28</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L31">DiscoveryService.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -220,10 +223,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static tsd-is-external">
 					<a name="instance" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagProtected">Protected</span> instance</h3>
-					<div class="tsd-signature tsd-kind-icon">instance<span class="tsd-signature-symbol">:</span> <a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">instance<span class="tsd-signature-symbol">:</span> <a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in DiscoveryService.ts:29</li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L33">DiscoveryService.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -240,7 +243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in DiscoveryService.ts:90</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L76">DiscoveryService.ts:76</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -269,68 +272,19 @@
 					<a name="down" class="tsd-anchor"></a>
 					<h3>down</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">down<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">down<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in DiscoveryService.ts:86</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L104">DiscoveryService.ts:104</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <span class="tsd-signature-type">Type</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a name="getstatus" class="tsd-anchor"></a>
-					<h3>get<wbr>Status</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Status<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in DiscoveryService.ts:53</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>key: <span class="tsd-signature-type">Type</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-external">
-					<a name="notifylisteners" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> notify<wbr>Listeners</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">notify<wbr>Listeners<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span>, status<span class="tsd-signature-symbol">: </span><a href="../enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in DiscoveryService.ts:94</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>type: <span class="tsd-signature-type">Type</span></h5>
-								</li>
-								<li>
-									<h5>status: <a href="../enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a></h5>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -348,7 +302,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Service.onInit</p>
 								<ul>
-									<li>Defined in DiscoveryService.ts:113</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L64">DiscoveryService.ts:64</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -372,7 +326,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Service.onMount</p>
 								<ul>
-									<li>Defined in DiscoveryService.ts:111</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L62">DiscoveryService.ts:62</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -396,7 +350,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Service.onReady</p>
 								<ul>
-									<li>Defined in DiscoveryService.ts:115</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L69">DiscoveryService.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -420,7 +374,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Service.onUnmount</p>
 								<ul>
-									<li>Defined in DiscoveryService.ts:117</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L71">DiscoveryService.ts:71</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -434,28 +388,77 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a name="once" class="tsd-anchor"></a>
-					<h3>once</h3>
+					<a name="status" class="tsd-anchor"></a>
+					<h3>status</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">once<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span>, listener<span class="tsd-signature-symbol">: </span><a href="../globals.html#discoverylistener" class="tsd-signature-type">DiscoveryListener</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in DiscoveryService.ts:64</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L89">DiscoveryService.ts:89</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <span class="tsd-signature-type">Type</span></h5>
-								</li>
-								<li>
-									<h5>listener: <a href="../globals.html#discoverylistener" class="tsd-signature-type">DiscoveryListener</a></h5>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/discoverystatus.html" class="tsd-signature-type">DiscoveryStatus</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="subscribe" class="tsd-anchor"></a>
+					<h3>subscribe</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L81">DiscoveryService.ts:81</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>listener: <a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="unsubscribe" class="tsd-anchor"></a>
+					<h3>unsubscribe</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">unsubscribe<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L85">DiscoveryService.ts:85</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>listener: <a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -463,74 +466,62 @@
 					<a name="up" class="tsd-anchor"></a>
 					<h3>up</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">up<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">up<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in DiscoveryService.ts:77</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L99">DiscoveryService.ts:99</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <span class="tsd-signature-type">Type</span></h5>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="getinstance" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Instance</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Instance&lt;Type&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Instance<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in DiscoveryService.ts:46</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L55">DiscoveryService.ts:55</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>Type</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="initialize" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">initialize&lt;Type&gt;<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in DiscoveryService.ts:36</li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/DiscoveryService.ts#L45">DiscoveryService.ts:45</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>Type</h4>
-								</li>
-							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>options: <a href="../interfaces/discoveryserviceoptions.html" class="tsd-signature-type">DiscoveryServiceOptions</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="discoveryservice.html" class="tsd-signature-type">DiscoveryService</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -549,9 +540,12 @@
 					<li class=" tsd-kind-enum tsd-is-external">
 						<a href="../enums/discoverystatus.html" class="tsd-kind-icon">Discovery<wbr>Status</a>
 					</li>
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="baseobservable.html" class="tsd-kind-icon">Base<wbr>Observable</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-has-type-parameter tsd-is-external">
+					<li class="current tsd-kind-class tsd-is-external">
 						<a href="discoveryservice.html" class="tsd-kind-icon">Discovery<wbr>Service</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
@@ -562,6 +556,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="discoveryservice.html#logger" class="tsd-kind-icon">logger</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="discoveryservice.html#observable" class="tsd-kind-icon">observable</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
 								<a href="discoveryservice.html#options" class="tsd-kind-icon">options</a>
@@ -584,12 +581,6 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="discoveryservice.html#down" class="tsd-kind-icon">down</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="discoveryservice.html#getstatus" class="tsd-kind-icon">get<wbr>Status</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-external">
-								<a href="discoveryservice.html#notifylisteners" class="tsd-kind-icon">notify<wbr>Listeners</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
 								<a href="discoveryservice.html#oninit" class="tsd-kind-icon">on<wbr>Init</a>
 							</li>
@@ -603,15 +594,21 @@
 								<a href="discoveryservice.html#onunmount" class="tsd-kind-icon">on<wbr>Unmount</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="discoveryservice.html#once" class="tsd-kind-icon">once</a>
+								<a href="discoveryservice.html#status" class="tsd-kind-icon">status</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="discoveryservice.html#subscribe" class="tsd-kind-icon">subscribe</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="discoveryservice.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="discoveryservice.html#up" class="tsd-kind-icon">up</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="discoveryservice.html#getinstance" class="tsd-kind-icon">get<wbr>Instance</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static tsd-is-external">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="discoveryservice.html#initialize" class="tsd-kind-icon">initialize</a>
 							</li>
 						</ul>
@@ -622,10 +619,19 @@
 						<a href="memorydiscoveryservice.html" class="tsd-kind-icon">Memory<wbr>Discovery<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-external">
+						<a href="memoryobservable.html" class="tsd-kind-icon">Memory<wbr>Observable</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="redisdiscoverystorage.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="redisobservable.html" class="tsd-kind-icon">Redis<wbr>Observable</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/basediscoverystorage.html" class="tsd-kind-icon">Base<wbr>Discovery<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/baseobservableoptions.html" class="tsd-kind-icon">Base<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/discoverylistenersmap.html" class="tsd-kind-icon">Discovery<wbr>Listeners<wbr>Map</a>
@@ -633,11 +639,20 @@
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/discoverymodulesmap.html" class="tsd-kind-icon">Discovery<wbr>Modules<wbr>Map</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/discoveryserviceoptions.html" class="tsd-kind-icon">Discovery<wbr>Service<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/memoryobservableoptions.html" class="tsd-kind-icon">Memory<wbr>Observable<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/observer.html" class="tsd-kind-icon">Observer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="../interfaces/redisdiscoverystorageoptions.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="../interfaces/redisobservableoptions.html" class="tsd-kind-icon">Redis<wbr>Observable<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
 						<a href="../globals.html#discoverylistener" class="tsd-kind-icon">Discovery<wbr>Listener</a>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RedisDiscoveryStorage | nano-discovery (v1.0.0)</title>
+	<title>BaseObservable | nano-discovery (v1.0.0)</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,28 +56,37 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="redisdiscoverystorage.html">RedisDiscoveryStorage</a>
+					<a href="baseobservable.html">BaseObservable</a>
 				</li>
 			</ul>
-			<h1>Class RedisDiscoveryStorage</h1>
+			<h1>Class BaseObservable</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A simple Observable pattern utility.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">RedisDiscoveryStorage</span>
+						<span class="target">BaseObservable</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="memoryobservable.html" class="tsd-signature-type">MemoryObservable</a>
+							</li>
+							<li>
+								<a href="redisobservable.html" class="tsd-signature-type">RedisObservable</a>
+							</li>
+						</ul>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/basediscoverystorage.html" class="tsd-signature-type">BaseDiscoveryStorage</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -87,26 +96,25 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external"><a href="redisdiscoverystorage.html#client" class="tsd-kind-icon">client</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static tsd-is-external"><a href="baseobservable.html#notification_timeout" class="tsd-kind-icon">NOTIFICATION_<wbr>TIMEOUT</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#connect" class="tsd-kind-icon">connect</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#getitem" class="tsd-kind-icon">get<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#removeitem" class="tsd-kind-icon">remove<wbr>Item</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="redisdiscoverystorage.html#setitem" class="tsd-kind-icon">set<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#connect" class="tsd-kind-icon">connect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#notify" class="tsd-kind-icon">notify</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="baseobservable.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a></li>
 							</ul>
 						</section>
 					</div>
@@ -118,56 +126,55 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Redis<wbr>Discovery<wbr>Storage<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/redisdiscoverystorageoptions.html" class="tsd-signature-type">RedisDiscoveryStorageOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="redisdiscoverystorage.html" class="tsd-signature-type">RedisDiscoveryStorage</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Base<wbr>Observable<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/baseobservableoptions.html" class="tsd-signature-type">BaseObservableOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="baseobservable.html" class="tsd-signature-type">BaseObservable</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L12">storage/RedisDiscoveryStorage.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L21">observable/BaseObservable.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/redisdiscoverystorageoptions.html" class="tsd-signature-type">RedisDiscoveryStorageOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/baseobservableoptions.html" class="tsd-signature-type">BaseObservableOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="redisdiscoverystorage.html" class="tsd-signature-type">RedisDiscoveryStorage</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="baseobservable.html" class="tsd-signature-type">BaseObservable</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
-					<a name="client" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> client</h3>
-					<div class="tsd-signature tsd-kind-icon">client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Redis.RedisClient</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L12">storage/RedisDiscoveryStorage.ts:12</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;redis&quot;</span></div>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/basediscoverystorage.html">BaseDiscoveryStorage</a>.<a href="../interfaces/basediscoverystorage.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L11">storage/RedisDiscoveryStorage.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L18">observable/BaseObservable.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="options" class="tsd-anchor"></a>
 					<h3>options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/redisdiscoverystorageoptions.html" class="tsd-signature-type">RedisDiscoveryStorageOptions</a></div>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/baseobservableoptions.html" class="tsd-signature-type">BaseObservableOptions</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L14">storage/RedisDiscoveryStorage.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L23">observable/BaseObservable.ts:23</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static tsd-is-external">
+					<a name="notification_timeout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagProtected">Protected</span> NOTIFICATION_<wbr>TIMEOUT</h3>
+					<div class="tsd-signature tsd-kind-icon">NOTIFICATION_<wbr>TIMEOUT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;10</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L21">observable/BaseObservable.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -175,25 +182,8 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a name="clear" class="tsd-anchor"></a>
-					<h3>clear</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L53">storage/RedisDiscoveryStorage.ts:53</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="connect" class="tsd-anchor"></a>
-					<h3>connect</h3>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> connect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
@@ -201,7 +191,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L18">storage/RedisDiscoveryStorage.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L27">observable/BaseObservable.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -210,7 +200,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="disconnect" class="tsd-anchor"></a>
-					<h3>disconnect</h3>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> disconnect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">disconnect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
@@ -218,7 +208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L27">storage/RedisDiscoveryStorage.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L29">observable/BaseObservable.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -226,45 +216,64 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a name="getitem" class="tsd-anchor"></a>
-					<h3>get<wbr>Item</h3>
+					<a name="notify" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> notify</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Item<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">notify<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L40">storage/RedisDiscoveryStorage.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L52">observable/BaseObservable.ts:52</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Notifies all listeners about an event update.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>key: <span class="tsd-signature-type">string</span></h5>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> data: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a name="removeitem" class="tsd-anchor"></a>
-					<h3>remove<wbr>Item</h3>
+					<a name="subscribe" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> subscribe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Item<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, observable<span class="tsd-signature-symbol">: </span><a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L45">storage/RedisDiscoveryStorage.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L36">observable/BaseObservable.ts:36</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Subscribe for updates.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>key: <span class="tsd-signature-type">string</span></h5>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>observable: <a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The instace to be notified</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -272,25 +281,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a name="setitem" class="tsd-anchor"></a>
-					<h3>set<wbr>Item</h3>
+					<a name="unsubscribe" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> unsubscribe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Item<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">unsubscribe<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, observable<span class="tsd-signature-symbol">: </span><a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/storage/RedisDiscoveryStorage.ts#L35">storage/RedisDiscoveryStorage.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/nxtep-io/nano-discovery/blob/713f444/lib/observable/BaseObservable.ts#L43">observable/BaseObservable.ts:43</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Unsubscribe from updates.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>key: <span class="tsd-signature-type">string</span></h5>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">string</span></h5>
+									<h5>observable: <a href="../interfaces/observer.html" class="tsd-signature-type">Observer</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The instance to be removed from listeners</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -312,9 +329,42 @@
 					<li class=" tsd-kind-enum tsd-is-external">
 						<a href="../enums/discoverystatus.html" class="tsd-kind-icon">Discovery<wbr>Status</a>
 					</li>
-					<li class=" tsd-kind-class tsd-is-external">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-is-external">
 						<a href="baseobservable.html" class="tsd-kind-icon">Base<wbr>Observable</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#options" class="tsd-kind-icon">options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-static tsd-is-external">
+								<a href="baseobservable.html#notification_timeout" class="tsd-kind-icon">NOTIFICATION_<wbr>TIMEOUT</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#connect" class="tsd-kind-icon">connect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#disconnect" class="tsd-kind-icon">disconnect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#notify" class="tsd-kind-icon">notify</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#subscribe" class="tsd-kind-icon">subscribe</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="baseobservable.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="discoveryservice.html" class="tsd-kind-icon">Discovery<wbr>Service</a>
 					</li>
@@ -324,45 +374,9 @@
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="memoryobservable.html" class="tsd-kind-icon">Memory<wbr>Observable</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class tsd-is-external">
+					<li class=" tsd-kind-class tsd-is-external">
 						<a href="redisdiscoverystorage.html" class="tsd-kind-icon">Redis<wbr>Discovery<wbr>Storage</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-external">
-								<a href="redisdiscoverystorage.html#client" class="tsd-kind-icon">client</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#name" class="tsd-kind-icon">name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#options" class="tsd-kind-icon">options</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#clear" class="tsd-kind-icon">clear</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#connect" class="tsd-kind-icon">connect</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#disconnect" class="tsd-kind-icon">disconnect</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#getitem" class="tsd-kind-icon">get<wbr>Item</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#removeitem" class="tsd-kind-icon">remove<wbr>Item</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="redisdiscoverystorage.html#setitem" class="tsd-kind-icon">set<wbr>Item</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-is-external">
 						<a href="redisobservable.html" class="tsd-kind-icon">Redis<wbr>Observable</a>
 					</li>
