@@ -11,6 +11,7 @@ export interface MemoryObservableOptions extends BaseObservableOptions {
  * A simple Observable pattern utility.
  */
 export class MemoryObservable extends BaseObservable {
+  name = 'memory';
   listeners: {[eventName: string]: Observer[]};
 
   // The timeout to wait untill notifying subscribers in milliseconds

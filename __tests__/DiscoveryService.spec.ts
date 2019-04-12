@@ -23,7 +23,7 @@ describe("lib.discovery.DiscoveryService", async () => {
     await expect(discovery.status('ENSURE_CLEAR')).resolves.toEqual(DiscoveryStatus.UNKNOWN);
   });
 
-  it("should handle a ready service once listener properly", async (done) => {
+  it("should handle a ready service listener properly", async (done) => {
     let counter = 0;
     const TestKey = 'test';
     const discovery = new DiscoveryService({ name: 'TestDiscoveryService' });

@@ -36,6 +36,10 @@ export class DiscoveryService extends Service {
     super(options);
     this.storage = options.storage || new MemoryDiscoveryService();
     this.observable = options.observable || new MemoryObservable();
+    this.logger.info(`${this.options.name} initialized successfully`, {
+      storage: this.storage.name,
+      observable: this.observable.name,
+    });
   }
 
   public static initialize(options: DiscoveryServiceOptions): DiscoveryService {
@@ -57,7 +61,10 @@ export class DiscoveryService extends Service {
 
   public async onMount(server) { }
 
-  public async onInit(server) { }
+  public async onInit(server) { 
+    // await this.storage.connect();
+    // await this.observable.connect();
+  }
 
   public async onReady(server) { }
 

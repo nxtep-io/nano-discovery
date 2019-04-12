@@ -15,6 +15,7 @@ export interface BaseObservableOptions {
  * A simple Observable pattern utility.
  */
 export abstract class BaseObservable {
+  public abstract name: string;
 
   // The timeout to wait untill notifying subscribers in milliseconds
   protected static NOTIFICATION_TIMEOUT = 10;

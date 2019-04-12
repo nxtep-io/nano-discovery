@@ -1,6 +1,7 @@
 import { BaseDiscoveryStorage } from "./BaseDiscoveryStorage";
 
 export class MemoryDiscoveryService implements BaseDiscoveryStorage {
+  name = 'memory';
   protected data = {};
 
   public async connect(): Promise<void> {
