@@ -25,13 +25,27 @@ describe("lib.discovery.Redis", async () => {
     await expect(discovery.status('unknown')).resolves.toEqual(DiscoveryStatus.UNKNOWN);
   });
 
+  it("should handle a simple up down routine properly", async () => {
+    const TestKey = 'test';
+    await expect(discovery.status(TestKey)).resolves.toEqual(DiscoveryStatus.UNKNOWN);
+
+    await discovery.up('ENSURE_CLEAR');
+    await discovery.up(TestKey);
+    await expect(discovery.status(TestKey)).resolves.toEqual(DiscoveryStatus.UP);
+
+    await discovery.down(TestKey);
+    await expect(discovery.status(TestKey)).resolves.toEqual(DiscoveryStatus.DOWN);
+
+    await discovery.clear();
+    await expect(discovery.status('ENSURE_CLEAR')).resolves.toEqual(DiscoveryStatus.UNKNOWN);
+  });
+
   it("should handle a ready service listener properly", async (done) => {
     let counter = 0;
     const TestKey = 'test';
 
     await discovery.subscribe(TestKey, {
-      update: async (key, status) => {
-        console.log('REDIS!');
+      update: async (key: string, status: DiscoveryStatus) => {
         counter += 1;
         expect(key).toBe(TestKey);
         expect(status).toBe(DiscoveryStatus.UP);

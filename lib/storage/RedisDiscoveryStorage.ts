@@ -38,7 +38,7 @@ export class RedisDiscoveryStorage implements BaseDiscoveryStorage {
   }
 
   public async getItem(key: string): Promise<string> {
-    const getAsync = promisify(this.client.get).bind(this.client);;
+    const getAsync = promisify(this.client.get).bind(this.client);
     return getAsync(key);
   }
 
